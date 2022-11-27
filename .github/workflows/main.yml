@@ -39,6 +39,9 @@ jobs:
         with:
           username: ${{secrets.USER_NAME}}
           password: ${{secrets.ACCESS_TOKEN}}
+          
+      - name: Install Dependencies
+        run: npm install
 
       #Zbudowanie i wypchniecie obrazu na Dockerhuba
       - name: Build and push
