@@ -49,7 +49,7 @@ jobs:
           context: ./
           file: Dockerfile
           push: true
-          tags: |
+          tags: ${{secrets.USER_NAME}}/lab7:latest
       
       #Przenies cache'a
       - name: Move cache
