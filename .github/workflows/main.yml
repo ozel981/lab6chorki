@@ -12,8 +12,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
@@ -39,9 +37,6 @@ jobs:
         with:
           username: ${{secrets.USER_NAME}}
           password: ${{secrets.ACCESS_TOKEN}}
-          
-      - name: Install Dependencies
-        run: npm install
 
       #Zbudowanie i wypchniecie obrazu na Dockerhuba
       - name: Build and push
