@@ -46,8 +46,8 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
           platforms: linux/arm/v7,linux/arm64/v8,linux/amd64 
-          context: ./
-          file: ./dockerfile.v1
+          context: .
+          file: Dockerfile
           push: true
           tags: ${{secrets.USER_NAME}}/lab7:latest
       
